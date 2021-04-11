@@ -4,7 +4,7 @@ body {
 
 a:link {
   color: green;
-  background-color: transparent;
+  background-color: grey;
   text-decoration: none;
 }
 
@@ -15,7 +15,7 @@ a:visited {
 }
 
 a:hover {
-  color: red;
+  color: blue;
   background-color: transparent;
   text-decoration: underline;
 }
@@ -53,13 +53,13 @@ body{
   margin: 0;
 }
 
-
+/* 
 li{
   list-style-type: none;  
   margin: 0 2vw;
-  /* our font-size will be 3% of the height of the viewport */
+   our font-size will be 3% of the height of the viewport 
   font-size: 3vh;
-}
+} */
 
 .centrado{
   text-align: center; border: 0px dotted #000; padding: 8px;
