@@ -2,20 +2,22 @@ body {
   background-color: lightgreen;
 }
 
+/* diseño de https://www.w3schools.com/html/html_links_colors.asp */
+
 a:link {
   color: green;
-  background-color: grey;
+  background-color: transparent;
   text-decoration: none;
 }
 
 a:visited {
-  color: pink;
+  color: blue;
   background-color: transparent;
   text-decoration: none;
 }
 
 a:hover {
-  color: blue;
+  color: red;
   background-color: transparent;
   text-decoration: underline;
 }
@@ -53,13 +55,13 @@ body{
   margin: 0;
 }
 
-/* 
+
 li{
   list-style-type: none;  
   margin: 0 2vw;
-   our font-size will be 3% of the height of the viewport 
+  /* our font-size will be 3% of the height of the viewport */
   font-size: 3vh;
-} */
+}
 
 .centrado{
   text-align: center; border: 0px dotted #000; padding: 8px;
