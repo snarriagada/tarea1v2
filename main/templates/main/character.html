@@ -1,0 +1,78 @@
+
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href= "{% static 'mystyle.css'%}">
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personaje</title>
+</head>
+<body>
+    <h1 class="centrado"> PAGINA PERSONAJE </h1>
+
+
+    <li>  Nombre: {{contenido.0.name}} </li>
+    <li>  Ocupacion:  </li>
+    <blockquote>
+    {% for ocupacion in contenido.0.occupation%}
+
+    <li>{{ocupacion}}</li>
+
+    {% endfor %}
+    </blockquote>
+
+
+
+
+    <li>  Estado: {{contenido.0.status}} </li>
+    <li>  Nickname: {{contenido.0.nickname}} </li>
+
+    <li>  Apariciones en Breaking Bad: </li>
+    <blockquote>
+
+    {% for temporada in contenido.0.appearance%}
+
+        <li> <a href="/breakingbad/{{temporada}}/">Temporada {{temporada}} </a></li>
+
+    {% endfor %}
+    </blockquote>
+
+
+    <li>  Apariciones en Better Call Saul: </li>
+    <blockquote>
+
+    {% for temporada in contenido.0.better_call_saul_appearance%}
+
+        <li> <a href="/bettercallsaul/{{temporada}}/">Temporada {{temporada}} </a></li>
+
+    {% endfor %}
+    </blockquote>
+
+
+    <li>  Actor: {{contenido.0.portrayed}} </li>
+    <li>  Categoría: {{contenido.0.category}} </li>
+    <li>  Frases: </li>
+    <blockquote>
+        
+    {% for q in quotes %}
+
+        <li> {{q.quote}}</li>
+
+    {% endfor %}  
+    </blockquote>
+
+
+
+
+    <img src="{{contenido.0.img}}" class="center">
+
+
+</body>
+</html>
+
+
+{% endblock %}
+

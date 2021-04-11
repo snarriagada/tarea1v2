@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href= "{% static 'mystyle.css'%}">
+
+<h1>Temporadas Breaking Bad</h1>
+
+{% for i in seasons.BB %}
+    <li> <button class="button"><a href="/breakingbad/{{i}}/">Temporada {{i}} </a></button></li>
+
+
+{% endfor %}
+
+<h1>Temporadas Better Call Saul</h1>
+
+{% for i in seasons.BCS %}
+    <li> <button class="button"><a href="/bettercallsaul/{{i}}/">Temporada {{i}} </a></button></li>
+
+{% endfor %}
+
+
+{% endblock %}

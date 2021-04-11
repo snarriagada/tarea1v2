@@ -1,0 +1,44 @@
+
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Episodio</title>
+    {% if serie == 0 %}
+        <h1> BREAKING BAD </h1>
+    {% else %}
+        <h1> BETTER CALL SAUL </h1>
+    {% endif %}
+
+</head>
+<body>
+    <h1>PAGINA EPISODIO </h1>
+
+
+<li>Titulo: {{episodios.0.title}}</li>
+<li>Temporada: {{episodios.0.season}}</li>
+<li>Lanzamientio: {{episodios.0.air_date}}</li>
+<li>Episodio: {{episodios.0.episode}}</li>
+<li>Serie: {{episodios.0.series}}</li>
+
+
+<h2>Personajes:</h2>
+
+<blockquote>
+
+{% for i in personajes%} 
+
+    <li> <a href="/character/{{serie}}/{{i.2}}/">{{i.1}} </a></li>
+{% endfor %}
+</blockquote>
+
+</body>
+</html>
+
+
+{% endblock %}
